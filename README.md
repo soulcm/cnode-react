@@ -1,2 +1,4 @@
 # cnode-react
-react+redux+react-router
+react+redux+react-router搭建的cnode
+
+
