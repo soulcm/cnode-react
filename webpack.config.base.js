@@ -37,9 +37,9 @@ module.exports = {
         new webpack.NoErrorsPlugin(),
         new HtmlWebpackPlugin({
             title: 'cnode',
-            template: 'index.html',
+            template: 'template/index.html',
             inject: true,
-            filename: 'app.html',
+            filename: 'index.html',
             chunks: ['commons', 'app']
         }),
     ]

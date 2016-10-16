@@ -13,7 +13,6 @@ app.set('env', env);
 
 
 if (app.get('env') === 'development') {
-    port = 3000
     var webpack = require('webpack'),
         webpackDevMiddleware = require('webpack-dev-middleware'),
         webpackHotMiddleware = require('webpack-hot-middleware'),

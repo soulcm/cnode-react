@@ -1,16 +1,23 @@
-import React, {Component} from 'react'
-import ReactDom from 'react-dom'
+import React, {Component} from 'react';
+import ReactDom from 'react-dom';
+import {Router, Route, browserHistory, hashHistory} from 'react-router';
+
+import Home from 'components/home';
+import Topic from 'components/Topic';
+
 
 export default class App extends Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
     }
 
     render() {
         return (
-            <div>
-                基本测试1
-            </div>
+            <Router history={browserHistory}>
+                <Route path="/" component={Home}>
+                    <Route path="/topic" component={Topic} />
+                </Route>
+            </Router>
         )
     }
 }
