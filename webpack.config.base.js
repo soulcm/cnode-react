@@ -17,6 +17,9 @@ module.exports = {
         }, {
             test: /\.(less|css)?$/,
             loader: ExtractTextPlugin.extract(['css', 'less'])
+        }, {
+            test: /\.(png|jpg)$/,
+			loader: 'url?limit=25000'
         }]
     },
 
@@ -27,6 +30,8 @@ module.exports = {
             actions: path.resolve(entryPath, 'actions'),
             reducers: path.resolve(entryPath, 'reducers'),
             containers: path.resolve(entryPath, 'containers'),
+            constants: path.resolve(entryPath, 'constants'),
+            store: path.resolve(entryPath, 'store'),
             images: path.resolve(entryPath, 'images'),
             styles: path.resolve(entryPath, 'styles')
         }

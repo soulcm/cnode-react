@@ -1,31 +1,24 @@
 import React, {Component} from 'react';
-import ReactDom from 'react-dom';
-import {Router, Route, browserHistory, hashHistory} from 'react-router';
+import {render} from 'react-dom';
+import {Router, Route, browserHistory} from 'react-router';
+import {Provider} from 'react-redux';
 
-import Home from 'components/home';
-import Topic from 'components/Topic';
+import Root from 'containers/root';
+import VisibleTodoList from 'containers/visibleTodoList';
+import store from 'store/index';
 
-
-export default class App extends Component {
-    constructor(props) {
-        super(props)
-    }
-
-    render() {
-        return (
-            <Router history={browserHistory}>
-                <Route path="/" component={Home}>
-                    <Route path="/topic" component={Topic} />
-                </Route>
-            </Router>
-        )
-    }
-}
-
-
-const dom = document.getElementById('app')
-
-ReactDom.render(<App />, dom)
+render(
+    <Provider store={store}>
+        <Router history={browserHistory}>
+            <Route path="/" component={Root}>
+                <Route path="all" component={VisibleTodoList} />
+                <Route path="completed" component={VisibleTodoList} />
+                <Route path="active" component={VisibleTodoList} />
+            </Route>
+        </Router>
+    </Provider>,
+    document.getElementById('app')
+)
 
 
 

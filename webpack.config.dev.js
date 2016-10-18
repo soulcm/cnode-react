@@ -17,13 +17,13 @@ baseWebpackConfig.plugins.push(
             NODE_ENV: JSON.stringify('development')
         }
     }),
-    new ExtractTextPlugin('[name].less'),
+    new ExtractTextPlugin('[name].css'),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin()
 );
 
 module.exports = merge(baseWebpackConfig, {
-    devtool: '#cheap-module-source-map',
+    devtool: '#source-map',
     output: {
         path: path.join(__dirname),
         filename: '[name].js',

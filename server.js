@@ -22,7 +22,7 @@ if (app.get('env') === 'development') {
 
     var devMiddleware = webpackDevMiddleware(compiler, {
         publicPath: webpackDevConfig.output.publicPath,
-        // noInfo: true,
+        noInfo: true,
         stats: {
             colors: true,
             // chunks: false
