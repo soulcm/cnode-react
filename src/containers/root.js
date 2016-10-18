@@ -12,7 +12,7 @@ export default class Root extends Component {
         return (
             <section className="todoapp">
                 <Header />
-                {this.props.children}
+                {this.props.children || <VisibleTodoList />}
                 <Footer />
             </section>
         )

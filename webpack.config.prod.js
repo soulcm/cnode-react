@@ -24,6 +24,6 @@ module.exports = merge(baseWebpackConfig, {
     output: {
         path: path.join(__dirname, 'assests'),
         filename: 'lib/[name].[hash].js',
-        publicPath: 'http://127.0.0.1:8080/'
+        publicPath: 'http://127.0.0.1:3000/'
     }
 })

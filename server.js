@@ -5,12 +5,12 @@ var webpack = require('webpack')
 var port = process.env.PORT || 3000
 
 var app = express()
+var routes = require('./routes/index.js');
 
 
 // set env
 var env = process.env.NODE_ENV || '';
 app.set('env', env);
-
 
 if (app.get('env') === 'development') {
     var webpack = require('webpack'),
@@ -28,6 +28,7 @@ if (app.get('env') === 'development') {
             // chunks: false
         }
     });
+    // app.use(express.static(path.join(__dirname, '')))
 
     // serve webpack bundle output
     app.use(devMiddleware);
@@ -38,6 +39,8 @@ if (app.get('env') === 'development') {
 } else {
     app.use(express.static(path.join(__dirname, 'assests')))
 }
+
+app.use('/', routes);
 
 
 app.listen(port, function() {

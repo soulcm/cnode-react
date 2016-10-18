@@ -41,7 +41,7 @@ module.exports = {
         new webpack.optimize.CommonsChunkPlugin('commons', 'lib/commons.js'),
         new webpack.NoErrorsPlugin(),
         new HtmlWebpackPlugin({
-            title: 'cnode',
+            title: 'todo',
             template: 'template/index.html',
             inject: true,
             filename: 'index.html',
