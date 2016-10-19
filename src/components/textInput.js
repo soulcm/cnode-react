@@ -19,6 +19,9 @@ class TextInput extends Component {
     handleKeyDown(e) {
         if (e.keyCode === 13) { //enter
             this.props.onSave(this.state.value);
+            this.setState({
+                value: ''
+            })
         }
     }
 

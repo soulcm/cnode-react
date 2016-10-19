@@ -1,4 +1,17 @@
-# cnode-react
-react+redux+react-router搭建的cnode
+# react-redux todo
+react+redux+react-router搭建的todo
+
+**所用技术**
+
+react + redux + react-router + webpack + express
+
+```
+npm install
+//development环境
+npm run dev
+//production环境
+npm run build
+npm run prod
+
 
 

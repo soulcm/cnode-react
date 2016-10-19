@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {render} from 'react-dom';
-import {Router, Route, browserHistory} from 'react-router';
+import {Router, Route, IndexRoute, browserHistory} from 'react-router';
 import {Provider} from 'react-redux';
 
 import Root from 'containers/root';
@@ -11,7 +11,7 @@ render(
     <Provider store={store}>
         <Router history={browserHistory}>
             <Route path="/" component={Root}>
-                <Route path="all" component={VisibleTodoList} />
+                <IndexRoute component={VisibleTodoList} />
                 <Route path="completed" component={VisibleTodoList} />
                 <Route path="active" component={VisibleTodoList} />
             </Route>

@@ -17,7 +17,7 @@ export function deleteItem(id) {
 
 export function toogleItem(id) {
     return {
-        type: types.UPDATE_ITEM,
+        type: types.TOOGLE_ITEM,
         id
     }
 }

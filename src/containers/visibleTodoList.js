@@ -1,30 +1,34 @@
 import {connect} from 'react-redux';
 
-import * as types from 'constants/filterTypes';
-
 import TodoList from 'components/todoList';
+import {toogleItem, deleteItem} from 'actions/index';
 
-const getVisibleTodos = ({todos, visibilityFilter}) => {
-    switch (visibilityFilter) {
-        case types.SHOW_ALL:
-            return todos
-
-        case types.SHOW_COMPLETED:
+const getVisibleTodos = (todos, ownProps) => {
+    switch (ownProps.location.pathname) {
+        case '/':
+            return todos;
+        case '/completed':
             return todos.filter(item => item.completed)
-
-        case types.SHOW_ACTIVE:
+        case '/active':
             return todos.filter(item => !item.completed)
     }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
     return {
-        todos: getVisibleTodos(state)
+        todos: getVisibleTodos(state.todos, ownProps)
     }
 }
 
 const mapDispatchToProps = (dispatch) => {
-
+    return {
+        onToogleItem: (id) => {
+            dispatch(toogleItem(id))
+        },
+        onDeleteItem: (id) => {
+            dispatch(deleteItem(id))
+        }
+    }
 }
 
-export default connect(mapStateToProps)(TodoList)
+export default connect(mapStateToProps, mapDispatchToProps)(TodoList)

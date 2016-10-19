@@ -5,12 +5,10 @@ import TodoItem from 'components/todoItem';
 class TodoList extends Component {
     constructor(props) {
         super(props);
-
     }
 
-
     render() {
-        const {todos} = this.props;
+        const {todos, onToogleItem, onDeleteItem} = this.props;
         return (
             <section className="main">
 				<input className="toggle-all"
@@ -18,8 +16,10 @@ class TodoList extends Component {
 				<label htmlFor="toggle-all">Mark all as complete</label>
 				<ul className="todo-list">
 					{
-						todos.map(function(item) {
-							return <TodoItem key={item.id} {...item}/>
+						todos.map((item) => {
+							return <TodoItem key={item.id} {...item}
+										onToogleItem={() => onToogleItem(item.id)}
+										onDeleteItem={() => onDeleteItem(item.id)} />
 						})
 					}
 				</ul>

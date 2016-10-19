@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router';
+import {Link, IndexLink} from 'react-router';
 
 class Footer extends Component {
     render() {
@@ -12,13 +12,13 @@ class Footer extends Component {
 				</span>
 				<ul className="filters">
 				    <li>
-				        <Link to="/all">All</Link>
+				        <IndexLink to="/" activeClassName="selected">All</IndexLink>
 				    </li>
 				    <li>
-				        <Link to="/active">Active</Link>
+				        <Link to="/active" activeClassName="selected">Active</Link>
 				    </li>
 				    <li>
-				        <Link to="/completed">Completed</Link>
+				        <Link to="/completed" activeClassName="selected">Completed</Link>
 				    </li>
 				</ul>
 			</footer>

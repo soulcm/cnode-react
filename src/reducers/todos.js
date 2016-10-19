@@ -1,4 +1,4 @@
-import {ADD_ITEM, TOOGLE_ITEM} from 'constants/actionTypes';
+import {ADD_ITEM, TOOGLE_ITEM, DELETE_ITEM} from 'constants/actionTypes';
 
 const createItem = ({text, id}) => {
 	return {
@@ -25,9 +25,10 @@ const todos = (state = [], action) => {
             return [...state, createItem(action)]
 
         case TOOGLE_ITEM:
-            return state.map((item) => {
-                toogleItem(item, action)
-            })
+            return state.map(item => toogleItem(item, action))
+
+        case DELETE_ITEM:
+            return state.filter(item => item.id !== action.id)
 
         default:
             return state;
