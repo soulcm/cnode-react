@@ -5,6 +5,8 @@ react+redux+react-router搭建的todo
 
 react + redux + react-router + webpack + express
 
+redux-devtools redux-logger
+
 ```
 npm install
 //development环境
