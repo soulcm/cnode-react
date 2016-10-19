@@ -5,10 +5,12 @@ import {Provider} from 'react-redux';
 
 import Root from 'containers/root';
 import VisibleTodoList from 'containers/visibleTodoList';
+import DevTools from 'containers/DevTools';
 import store from 'store/index';
 
 render(
     <Provider store={store}>
+        <div>
         <Router history={browserHistory}>
             <Route path="/" component={Root}>
                 <IndexRoute component={VisibleTodoList} />
@@ -16,6 +18,8 @@ render(
                 <Route path="active" component={VisibleTodoList} />
             </Route>
         </Router>
+        <DevTools />
+        </div>
     </Provider>,
     document.getElementById('app')
 )
