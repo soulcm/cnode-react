@@ -15,16 +15,16 @@ export function deleteItem(id) {
     }
 }
 
-export function toogleItem(id) {
+export function toggleItem(id) {
     return {
-        type: types.TOOGLE_ITEM,
+        type: types.TOGGLE_ITEM,
         id
     }
 }
 
-export function setVisibilityFilter(filter) {
+export function toggleAll() {
     return {
-        type: types.SET_VISIBILITY_FILTER,
-        filter
+        type: types.TOGGLE_ALL,
     }
 }
+

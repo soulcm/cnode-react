@@ -1,20 +1,21 @@
 import React, {Component} from 'react';
+import classNames from 'classnames';
 
 class TodoItem extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
-        const {text, completed, onToogleItem, onDeleteItem} = this.props;
+        const {text, completed, onToggleItem, onDeleteItem} = this.props;
+
+        const classes = classNames({
+			'completed': completed,
+		});
 
         return (
-            <li className="">
+            <li className={classes}>
 				<div className="view">
 					<input className="toggle"
 						type="checkbox"
                         checked={completed}
-                        onClick={onToogleItem}/>
+                        onChange={onToggleItem}/>
 					<label>
 						{text}
 					</label>

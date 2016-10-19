@@ -9,7 +9,7 @@ import { addItem } from 'actions/index';
 class Header extends Component {
     render() {
         return (
-            <header id="header">
+            <header className="header">
 				<h1>todos</h1>
                 <AddTodo className="new-todo"
 			        placeholder="What needs to be done?"/>

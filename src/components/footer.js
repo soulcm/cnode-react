@@ -5,11 +5,6 @@ class Footer extends Component {
     render() {
         return (
             <footer className="footer">
-				<span className="todo-count">
-					<strong>
-
-					</strong>
-				</span>
 				<ul className="filters">
 				    <li>
 				        <IndexLink to="/" activeClassName="selected">All</IndexLink>

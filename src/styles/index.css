@@ -77,11 +77,11 @@ input[type="checkbox"] {
   -o-text-rendering: optimizeLegibility;
   text-rendering: optimizeLegibility;
 }
-#header {
+.header {
   padding-top: 15px;
   border-radius: inherit;
 }
-#header:before {
+.header:before {
   content: '';
   position: absolute;
   top: 0;

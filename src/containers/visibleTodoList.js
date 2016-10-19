@@ -1,7 +1,7 @@
 import {connect} from 'react-redux';
 
 import TodoList from 'components/todoList';
-import {toogleItem, deleteItem} from 'actions/index';
+import {toggleItem, deleteItem, toggleAll} from 'actions/index';
 
 const getVisibleTodos = (todos, ownProps) => {
     switch (ownProps.location.pathname) {
@@ -22,11 +22,14 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        onToogleItem: (id) => {
-            dispatch(toogleItem(id))
+        onToggleItem: (id) => {
+            dispatch(toggleItem(id))
         },
         onDeleteItem: (id) => {
             dispatch(deleteItem(id))
+        },
+        onToggleAll: () => {
+            dispatch(toggleAll())
         }
     }
 }
