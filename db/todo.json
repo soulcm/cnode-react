@@ -7,17 +7,17 @@
     },
     {
       "id": 1432537220265,
-      "text": "babel",
+      "text": "redux",
       "completed": false
     },
     {
       "id": 1432537224650,
-      "text": "webpack",
+      "text": "react-router",
       "completed": false
     },
     {
       "id": 1432537226554,
-      "text": "gulp",
+      "text": "webpack",
       "completed": false
     },
     {
@@ -27,22 +27,22 @@
     },
     {
       "id": 1432537229769,
-      "text": "lowdb",
+      "text": "mysql",
       "completed": true
     },
     {
       "id": 1432537236665,
-      "text": "superagent",
+      "text": "node",
       "completed": true
     },
     {
       "id": 1432537263449,
-      "text": "socket.io",
+      "text": "h5",
       "completed": true
     },
     {
       "id": 1436260714696,
-      "text": "asdfasdf",
+      "text": "hahaha",
       "time": "2015/7/7",
       "completed": true
     }

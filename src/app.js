@@ -8,9 +8,6 @@ import VisibleTodoList from 'containers/visibleTodoList';
 import store from 'store/index';
 import DevTools from 'containers/DevTools';
 
-require('es6-promise').polyfill();
-require('isomorphic-fetch');
-
 if (process.env.NODE_ENV === 'production') {
     render(
         <Provider store={store}>

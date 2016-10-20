@@ -1,5 +1,5 @@
 import * as types from 'constants/actionTypes';
-import fetchGet from 'apis/commonApi';
+import {getTodoList} from 'apis/commonApi';
 
 export function addItem({ text , id }) {
     return {
@@ -31,7 +31,7 @@ export function toggleAll() {
 
 export function getItems() {
     return (dispatch) => {
-        fetchGet('/apis/todos').then((res) => {
+        getTodoList().then((res) => {
             return dispatch({
                 type: types.GET_ITEMS,
                 data: res.list
