@@ -3,6 +3,13 @@ import React, {Component} from 'react';
 import TodoItem from 'components/todoItem';
 
 class TodoList extends Component {
+
+
+	componentWillMount() {
+		this.props.getItems();
+	}
+
+
     render() {
         const {todos, onToggleItem, onDeleteItem, onToggleAll} = this.props;
 		if (!todos.length) {

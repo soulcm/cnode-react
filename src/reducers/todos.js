@@ -1,4 +1,4 @@
-import {ADD_ITEM, TOGGLE_ITEM, DELETE_ITEM, TOGGLE_ALL} from 'constants/actionTypes';
+import {ADD_ITEM, TOGGLE_ITEM, DELETE_ITEM, TOGGLE_ALL, GET_ITEMS} from 'constants/actionTypes';
 
 const createItem = ({text, id}) => {
 	return {
@@ -48,10 +48,13 @@ const todos = (state = [], action) => {
             return state.filter(item => item.id !== action.id)
 
         case TOGGLE_ALL:
-            return toggleAll([...state]);
+            return toggleAll([...state])
+
+        case GET_ITEMS:
+            return action.data || state
         default:
-            return state;
+            return state
     }
 }
 
-export default todos;
+export default todos

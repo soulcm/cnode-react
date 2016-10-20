@@ -31,6 +31,7 @@ module.exports = {
             reducers: path.resolve(entryPath, 'reducers'),
             containers: path.resolve(entryPath, 'containers'),
             constants: path.resolve(entryPath, 'constants'),
+            apis: path.resolve(entryPath, 'apis'),
             store: path.resolve(entryPath, 'store'),
             images: path.resolve(entryPath, 'images'),
             styles: path.resolve(entryPath, 'styles')
