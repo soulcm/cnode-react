@@ -1,5 +1,5 @@
-import * as types from 'constants/actionTypes';
-import {getTodoList} from 'apis/commonApi';
+import * as types from '../constants/actionTypes';
+import {getTodoList} from '../apis/commonApi';
 
 export function addItem({ text , id }) {
     return {

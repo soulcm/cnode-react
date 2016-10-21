@@ -25,17 +25,17 @@ module.exports = {
 
     resolve: {
         extensions: ['', '.js', '.jsx', '.css', '.less'],
-        alias: {
-            components: path.resolve(entryPath, 'components'),
-            actions: path.resolve(entryPath, 'actions'),
-            reducers: path.resolve(entryPath, 'reducers'),
-            containers: path.resolve(entryPath, 'containers'),
-            constants: path.resolve(entryPath, 'constants'),
-            apis: path.resolve(entryPath, 'apis'),
-            store: path.resolve(entryPath, 'store'),
-            images: path.resolve(entryPath, 'images'),
-            styles: path.resolve(entryPath, 'styles')
-        }
+        // alias: {  //编辑器不方便,所以不用了
+        //     components: path.resolve(entryPath, 'components'),
+        //     actions: path.resolve(entryPath, 'actions'),
+        //     reducers: path.resolve(entryPath, 'reducers'),
+        //     containers: path.resolve(entryPath, 'containers'),
+        //     constants: path.resolve(entryPath, 'constants'),
+        //     apis: path.resolve(entryPath, 'apis'),
+        //     store: path.resolve(entryPath, 'store'),
+        //     images: path.resolve(entryPath, 'images'),
+        //     styles: path.resolve(entryPath, 'styles')
+        // }
     },
 
     plugins: [

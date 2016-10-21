@@ -1,7 +1,7 @@
 import {connect} from 'react-redux';
 
-import TodoList from 'components/todoList';
-import {toggleItem, deleteItem, toggleAll, getItems} from 'actions/index';
+import TodoList from '../components/todoList';
+import {toggleItem, deleteItem, toggleAll, getItems} from '../actions/index';
 
 const getVisibleTodos = (todos, ownProps) => {
     switch (ownProps.location.pathname) {

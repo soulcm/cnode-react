@@ -1,8 +1,9 @@
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 
-import todoApp from 'reducers/index';
+import todoApp from '../reducers/index';
 
-const store = createStore(todoApp, applyMiddleware(thunk));
-
-module.exports = store;
+const configureStore = (initialState) => {
+    return createStore(todoApp, initialState, applyMiddleware(thunk));
+}
+module.exports = configureStore;

@@ -1,7 +1,7 @@
 import {connect} from 'react-redux';
 
-import TextInput from 'components/textInput';
-import { addItem } from 'actions/index';
+import Header from '../components/header';
+import { addItem } from '../actions/index';
 
 const mapDispatchToProps = (dispatch) => {
     return {
@@ -13,4 +13,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(null, mapDispatchToProps)(TextInput)
+export default connect(null, mapDispatchToProps)(Header)

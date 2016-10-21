@@ -1,4 +1,4 @@
-import fetchApi from 'apis/index';
+import fetchApi from './index';
 
 
 export const getTodoList = (data) => {

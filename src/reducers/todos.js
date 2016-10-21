@@ -1,4 +1,4 @@
-import {ADD_ITEM, TOGGLE_ITEM, DELETE_ITEM, TOGGLE_ALL, GET_ITEMS} from 'constants/actionTypes';
+import {ADD_ITEM, TOGGLE_ITEM, DELETE_ITEM, TOGGLE_ALL, GET_ITEMS} from '../constants/actionTypes';
 
 const createItem = ({text, id}) => {
 	return {
