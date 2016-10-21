@@ -6,7 +6,8 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     entry: {
-        app: path.join(entryPath, 'app.js')
+        app: path.join(entryPath, 'app.js'),
+        vendor: ['react', 'redux', 'react-redux', 'classnames']
     },
 
     module: {
@@ -39,14 +40,14 @@ module.exports = {
     },
 
     plugins: [
-        new webpack.optimize.CommonsChunkPlugin('commons', 'lib/commons.js'),
+        new webpack.optimize.CommonsChunkPlugin('vendor', 'lib/vendor.bundle.js'),
         new webpack.NoErrorsPlugin(),
         new HtmlWebpackPlugin({
             title: 'todo',
             template: 'template/index.html',
             inject: true,
             filename: 'index.html',
-            chunks: ['commons', 'app']
+            chunks: ['vendor', 'app']
         }),
     ]
 }

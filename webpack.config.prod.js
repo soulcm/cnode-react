@@ -12,7 +12,7 @@ baseWebpackConfig.plugins = baseWebpackConfig.plugins.concat([
             NODE_ENV: JSON.stringify('production')
         }
     }),
-    new ExtractTextPlugin('lib/[name].[hash].css', {allChunks: true}),
+    new ExtractTextPlugin('lib/[name].[contenthash].css', {allChunks: true}),
     new webpack.optimize.UglifyJsPlugin({
         compress: {
             warnings: false
@@ -23,7 +23,7 @@ baseWebpackConfig.plugins = baseWebpackConfig.plugins.concat([
 module.exports = merge(baseWebpackConfig, {
     output: {
         path: path.join(__dirname, 'assests'),
-        filename: 'lib/[name].[hash].js',
+        filename: 'lib/[name].[chunkhash].js',
         publicPath: 'http://127.0.0.1:3000/'
     }
 })
